@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-About</title>
+    <link rel="stylesheet" href="./home.css">
+    <style>
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 160px); 
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            max-width: 800px;
+            color: crimson;
+            font-size: 1.1em; 
+        }
+
+        .about-section h1 {
+            font-size: 2em; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer-content {
+            color: crimson;
+        }
+
+        .footer-content a {
+            color: crimson;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="buy.html">Purchase</a>
+            <a href="sell.html">Sell</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>
+                TitleTown Furniture (TTF) is more than just a furniture store; we're a cornerstone for student life. Founded by Gray McLaney, Caleb Rogers, Jason Guiss, and Colton Horne, TTF is committed to easing the transitions of college students in and out of their living spaces.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:info@titletownfurniture.com">info@titletownfurniture.com</a> |
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>

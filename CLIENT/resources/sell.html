@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-Sell</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./sell.css">
+
+    
+</head>
+<body onload="handleSellLoad()">
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="buy.html">Purchase</a>
+            <a href="sell.html">Sell</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+        </nav>
+    </header>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buy</title>
+        <link rel="stylesheet" href="./home.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body onload="handleSellLoad()">
+        <header>
+            <h2 class="logo">TitleTown Furniture</h2>
+            <nav class="navigation">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="buy.html">Purchase</a>
+                <a href="sell.html">Sell</a>
+                <a href="contact.html">Contact</a>
+                <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+            </nav>
+        </header>
+        <div class="sellstf-container">
+            <div class="sellstf-box">
+                <form>
+                    <div class="form-box">
+                        <label for="furnitureType">Furniture Type:</label><br>
+                        <input type="text" id="furnitureType" name="furnitureType" required><br>
+                    </div>
+                    <div class="form-box">
+                        <label for="quality">Condition:</label><br>
+                        <select id="quality" name="quality" required>
+                          <option value="" disabled selected>Select Quality</option>
+                          <option value="New">New</option>
+                          <option value="Excellent">Excellent</option>
+                          <option value="Very Good">Very Good</option>
+                          <option value="Good">Good</option>
+                          <option value="Fair">Fair</option>
+                        </select><br>
+                    </div>
+                    <div class="form-box">
+                        <label for="pickupLocation">Pickup Location:</label><br>
+                        <select id="pickupLocation" name="pickupLocation" required>
+                          <option value="" disabled selected>Select Pickup Location</option>
+                          <option value="Tuscaloosa">Tuscaloosa</option>
+                          <option value="Birmingham">Birmingham</option>
+                          <option value="Huntsville">Huntsville</option>
+                          <option value="Florence">Florence</option>
+                        </select><br>
+                    </div>
+                    <div class="form-box">
+                        <label for="price">Price:</label><br>
+                        <input type="number" id="price" name="price" required><br>
+                    </div>
+                    <div class="form-box">
+                        <label for="imageURL">Image URL:</label><br>
+                        <input type="url" id="imageURL" name="imageURL" required><br><br>
+                    </div>
+                    <div class="form-box">
+                        <button onclick="postFurniture()" type="button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="./scripts/data.js"></script>
+    </html>

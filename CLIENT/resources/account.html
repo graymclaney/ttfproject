@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-Account</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./buy.css">
+    <link rel="stylesheet" href="./accountdetails.css"> 
+    <style>
+        #backButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: crimson; 
+            color: white; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="buy.html">Purchase</a>
+            <a href="sell.html">Sell</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+        </nav>
+    </header>
+    <div id="acct">
+        <div class="weird-button-container">
+            <div class="weird-button-wrapper">
+                <button class="weird-button" onclick="handleAccountLoad()">Load Account Details</button>
+                <button class="weird-button" onclick="showAccountSettings()">Account Settings</button>
+            </div>
+        </div>
+    </div>
+    <button id="backButton" onclick="window.location.href='account.html'">Back to Account</button>
+    
+    <script src="./scripts/data.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+            header.style.backdropFilter = `blur(${scrollPosition * 0.05}px)`;
+            header.style.transition = 'backdrop-filter 0.3s';
+        });
+    </script>
+</body>
+</html>

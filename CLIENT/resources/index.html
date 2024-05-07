@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-Login</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload = "handleOnLoad()">
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close">
+            <i class='bx bxs-x-square'></i>
+        </span>
+        <div class="form-box login">
+            <form id="loginForm">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input id="email" type="text" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input id="password" type="password" placeholder="Password" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="register-link">
+                    <p>Dont Have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <form id="registerForm">
+                <h1>Register</h1>
+                <div class="input-box">
+                    <input id="rusername" type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input id="remail" type="text" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input id="rpassword" type="password" placeholder="Password" required>
+                </div>r
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I Agree To Terms & Conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-link">
+                    <p>Already Have an account? <a href="#">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+<script src="./scripts/index.js"></script>
+</body>
+</html>

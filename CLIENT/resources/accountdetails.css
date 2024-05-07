@@ -1,0 +1,58 @@
+.account-settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.account-settings-box {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 190px auto 0;
+}
+
+.account-settings-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 20px;
+}
+
+.account-settings-info {
+    margin-bottom: 20px;
+}
+
+.account-settings-info strong {
+    color: crimson;
+    font-weight: bold;
+}
+
+.account-settings-info input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.account-settings-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: crimson;
+    border: 2px solid crimson; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.account-settings-button:hover {
+    background-color: crimson;
+    color: white;
+}

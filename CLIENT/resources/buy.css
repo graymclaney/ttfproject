@@ -1,0 +1,63 @@
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    overflow-y: auto; 
+    max-width: 100%; 
+}
+
+.product-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(25% - 22px);
+    box-shadow: 0 4px 8px rgba(244, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Keep this to align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; 
+    /* Add to ensure the content justifies correctly */
+    justify-content: space-between; 
+    /* Ensures that the wrapper grows as needed to fill the flex container */
+    min-height: 0;
+}
+
+.product-wrapper h1 {
+    font-size: 24px;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.product-wrapper div {
+    margin-bottom: 10px;
+    color: crimson;
+    font-size: 18px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.resize-image {
+    /* Removed fixed height to allow image to scale with width */
+    width: 100%; /* Make the image responsive to the width of its container */
+    object-fit: contain; /* This will ensure the image maintains its aspect ratio */
+    /* Removed fixed width to allow responsiveness */
+    margin-bottom: auto; /* This will push everything below it to the bottom */
+}
+
+.product-wrapper button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Makes the button full width */
+    margin-top: auto; /* This will push the button to the bottom */
+}

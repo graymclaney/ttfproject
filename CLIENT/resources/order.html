@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-Order</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./order.css">
+</head>
+<body onload="handleOrderLoad()">
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="buy.html">Purchase</a>
+            <a href="sell.html">Sell</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+        </nav>
+    </header>
+    <div id = "order">
+    </div>
+    <div>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Order Form</title>
+          <link rel="stylesheet" href="order.css">
+      </head>
+      <body>
+<div id="app">
+    <div id="order" class="product-wrapper">
+        <h1>Order Form</h1>
+        <form>
+            <div class="order-form">
+                <label for="creditCard">Credit Card Number:</label>
+                <input type="text" id="creditCard" name="creditCard" placeholder="Enter card number" required>
+            </div>
+            
+            <div>
+                <label for="pickupLocation">Pickup Location:</label>
+                <select id="pickupLocation" name="pickupLocation" required>
+                    <option value="Tuscaloosa">Tuscaloosa</option>
+                    <option value="Birmingham">Birmingham</option>
+                    <option value="Huntsville">Huntsville</option>
+                    <option value="Florence">Florence</option>
+                </select>
+            </div>
+            </form>
+
+            <div>
+                <label for="datePicker">Select a date:</label>
+                <input type="date" id="datePicker" name="datePicker" required>
+            </div>
+
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+            </div>
+            
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+            </div>
+            
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+            </div>
+            
+            <button type="button" onclick="postOrder()">Submit</button>
+        </form>
+    </div>
+</div>
+
+      <script src="./scripts/data.js"></script>
+      <script>
+          window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        header.style.backdropFilter = `blur(${scrollPosition * 0.05}px)`;
+        header.style.transition = 'backdrop-filter 0.3s';
+    });
+          var today = new Date();
+      
+          var minDate = new Date(today);
+          minDate.setDate(minDate.getDate());
+      
+          var maxDate = new Date(today);
+          maxDate.setDate(maxDate.getDate() + 14);
+      
+          var formattedMinDate = minDate.toISOString().split('T')[0];
+          var formattedMaxDate = maxDate.toISOString().split('T')[0];
+      
+          document.getElementById('datePicker').setAttribute('min', formattedMinDate);
+          document.getElementById('datePicker').setAttribute('max', formattedMaxDate);
+      </script>
+      </body>
+      </html>

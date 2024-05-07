@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF-Buy</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./buy.css">
+</head>
+<body onload="handleBuyLoad()">
+    <header>
+        <h2 class="logo">TitleTown Furniture</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="buy.html">Purchase</a>
+            <a href="sell.html">Sell</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="window.location.href='account.html'" class="btnAccount-popup">Account</button>
+        </nav>
+    </header>
+    <div id="app"></div>
+    <script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        header.style.backdropFilter = `blur(${scrollPosition * 0.05}px)`;
+        header.style.transition = 'backdrop-filter 0.3s';
+    });
+    </script>
+    
+    <script src="./scripts/data.js"></script>
+</body>
+</html>
